@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>בדיקת העלאה ל-Node.js</title>
+  </head>
+  <body>
+    <h1>בדיקת העלאת תמונה לקטלוג</h1>
+
+    <form
+      action="http://localhost:4000/api/catalog/upload"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <label for="imageFile">בחר תמונה:</label><br />
+      <input type="file" name="imageFile" id="imageFile" required /><br /><br />
+
+      <label for="category">קטגוריה:</label><br />
+      <input type="text" name="category" value="זרים" required /><br /><br />
+
+      <label for="description">תיאור:</label><br />
+      <input
+        type="text"
+        name="description"
+        value="תיאור בדיקה"
+        required
+      /><br /><br />
+
+      <label for="price">מחיר:</label><br />
+      <input type="number" name="price" value="100" required /><br /><br />
+
+      <button type="submit">שלח להעלאה</button>
+    </form>
+
+    <p style="color: red">
+      אחרי הלחיצה, בדוק/י את פלט הטרמינל כדי לוודא שקוד ה-201 (הצלחה) הופעל, ואת
+      הדפדפן כדי לראות את תגובת ה-JSON.
+    </p>
+  </body>
+</html>
