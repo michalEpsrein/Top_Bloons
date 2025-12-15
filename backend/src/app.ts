@@ -4,8 +4,9 @@ import * as path from "path";
 import { v2 as cloudinary } from "cloudinary";
 
 import catalogRouter from "./routes/catalogRouter";
+import genericRouter from "./routes/genericRouter";
 
-dotenv.config({ path: path.resolve(__dirname, "..", ".env") });
+dotenv.config({ path: path.resolve(__dirname, ".env") });
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -26,7 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/catalog", catalogRouter);
-
+app.use("/api/generic", genericRouter);
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
 });
