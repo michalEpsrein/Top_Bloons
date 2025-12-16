@@ -24,7 +24,7 @@ async function isStorageLimitExceededFor(maxStorageGB: number) {
     return usedStorageGB >= maxStorageGB;
   } catch (error) {
     console.error("Failed to read Cloudinary usage, blocking upload:", error);
-    return true;
+    return false;
   }
 }
 

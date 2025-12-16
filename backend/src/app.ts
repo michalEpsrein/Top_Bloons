@@ -6,7 +6,7 @@ import { v2 as cloudinary } from "cloudinary";
 import catalogRouter from "./routes/catalogRouter";
 import genericRouter from "./routes/genericRouter";
 
-dotenv.config({ path: path.resolve(__dirname, ".env") });
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;

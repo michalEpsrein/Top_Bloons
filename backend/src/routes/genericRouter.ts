@@ -13,7 +13,7 @@ const deleteHandler = remove(opts);
 router.post("/", fileUploadMiddleware, createHandler);
 router.get("/", readAllHandler);
 router.get("/:publicId", readOneHandler);
-router.delete("/", deleteHandler); 
+router.delete("/", deleteHandler);
 router.delete("/:publicId", deleteHandler);
 
 export default router;
